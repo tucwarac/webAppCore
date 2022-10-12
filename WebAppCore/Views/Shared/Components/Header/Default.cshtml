@@ -1,0 +1,162 @@
+﻿<div class="topbar-main navbar p-0">
+    <div class="container-fluid">
+
+        <!-- Logo container-->
+        <div class="topbar-left">
+            <!-- Text Logo -->
+            <a href="@Url.Action("Index", "Home", new { area = "" })" class="logo">
+                WebAppCore
+            </a>
+            <!-- Image Logo -->
+            @*<a href="@Url.Action("Index", "Home", new { area = "" })" class="logo">
+                <img src="~/assets/images/logo.png" alt="" height="30">
+            </a>*@
+
+        </div>
+        <!-- End Logo container-->
+
+
+        <div class="menu-extras">
+            <ul class="nav navbar-right float-right">
+                @*<li class="navbar-c-items">
+                <form role="search" class="navbar-left app-search float-left d-none d-sm-inline-block">
+                <input type="text" placeholder="Search..." class="form-control">
+                <a href=""><i class="fa fa-search"></i></a>
+                </form>
+                </li>*@
+
+                @*<li class="dropdown navbar-c-items">
+                <a href="#" class="right-menu-item dropdown-toggle" data-toggle="dropdown">
+                <i class="mdi mdi-email"></i>
+                <span class="badge up badge-danger badge-pill">8</span>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-right dropdown-lg user-list notify-list">
+                <li class="text-center">
+                <h5>Messages</h5>
+                </li>
+                <li>
+                <a href="#" class="user-list-item">
+                <div class="avatar">
+                <img src="assets/images/users/avatar-2.jpg" alt="">
+                </div>
+                <div class="user-desc">
+                <span class="name">Patricia Beach</span>
+                <span class="desc">There are new settings available</span>
+                <span class="time">2 hours ago</span>
+                </div>
+                </a>
+                </li>
+                <li>
+                <a href="#" class="user-list-item">
+                <div class="avatar">
+                <img src="assets/images/users/avatar-3.jpg" alt="">
+                </div>
+                <div class="user-desc">
+                <span class="name">Connie Lucas</span>
+                <span class="desc">There are new settings available</span>
+                <span class="time">2 hours ago</span>
+                </div>
+                </a>
+                </li>
+                <li>
+                <a href="#" class="user-list-item">
+                <div class="avatar">
+                <img src="assets/images/users/avatar-4.jpg" alt="">
+                </div>
+                <div class="user-desc">
+                <span class="name">Margaret Becker</span>
+                <span class="desc">There are new settings available</span>
+                <span class="time">2 hours ago</span>
+                </div>
+                </a>
+                </li>
+                <li class="all-msgs text-center">
+                <p class="m-0"><a href="#">See all Messages</a></p>
+                </li>
+                </ul>
+                </li>*@
+
+                @*<li class="dropdown navbar-c-items">
+                <a href="#" class="right-menu-item dropdown-toggle" data-toggle="dropdown">
+                <i class="mdi mdi-bell"></i>
+                <span class="badge up badge-success badge-pill">4</span>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-right dropdown-lg user-list notify-list">
+                <li class="text-center">
+                <h5>Notifications</h5>
+                </li>
+                <li>
+                <a href="#" class="user-list-item">
+                <div class="icon bg-info">
+                <i class="mdi mdi-account"></i>
+                </div>
+                <div class="user-desc">
+                <span class="name">New Signup</span>
+                <span class="time">5 hours ago</span>
+                </div>
+                </a>
+                </li>
+                <li>
+                <a href="#" class="user-list-item">
+                <div class="icon bg-danger">
+                <i class="mdi mdi-comment"></i>
+                </div>
+                <div class="user-desc">
+                <span class="name">New Message received</span>
+                <span class="time">1 day ago</span>
+                </div>
+                </a>
+                </li>
+                <li>
+                <a href="#" class="user-list-item">
+                <div class="icon bg-warning">
+                <i class="mdi mdi-settings"></i>
+                </div>
+                <div class="user-desc">
+                <span class="name">Settings</span>
+                <span class="time">1 day ago</span>
+                </div>
+                </a>
+                </li>
+                <li class="all-msgs text-center">
+                <p class="m-0"><a href="#">See all Notification</a></p>
+                </li>
+                </ul>
+                </li>*@
+
+                <li class="dropdown navbar-c-items">
+                    <a href="" class="dropdown-toggle waves-effect waves-light profile" data-toggle="dropdown" aria-expanded="true">
+                        <img src="~/assets/images/users/avatar-1.jpg" alt="user-img" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right user-list notify-list">
+                        <li class="text-center">
+                            <h5>fullname</h5>
+                        </li>
+                        @*<li><a href="javascript:void(0)" class="dropdown-item"><i class="ti-user m-r-5"></i> Profile</a></li>*@
+                        @*<li><a href="javascript:void(0)" class="dropdown-item"><i class="ti-settings m-r-5"></i> Settings</a></li>
+                        <li><a href="javascript:void(0)" class="dropdown-item"><i class="ti-lock m-r-5"></i> Lock screen</a></li>*@
+                        @*<li><a href="javascript:void(0)" class="dropdown-item"><i class="ti-power-off m-r-5"></i> Logout</a></li>*@
+
+                    </ul>
+
+                </li>
+            </ul>
+            <div class="menu-item">
+                <!-- Mobile menu toggle-->
+                <a class="navbar-toggle">
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+                <!-- End mobile menu toggle-->
+            </div>
+        </div>
+        <!-- end menu-extras -->
+
+    </div> <!-- end container-fluid -->
+</div>
+<!-- end topbar-main -->

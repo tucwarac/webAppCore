@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title Component  -->
+    @await Component.InvokeAsync("Title")
+
+    <!-- CSS include -->
+    @await Component.InvokeAsync("Css")
+</head>
+<body>
+    <header id="topnav">
+        <!-- Header Component  -->
+        @await Component.InvokeAsync("Header")
+
+        <!-- NavigationMenu Component  -->
+        @await Component.InvokeAsync("NavigationMenu")
+    </header>
+
+    <div class="wrapper">
+        <div class="container-fluid">
+            <!-- Breadcrumb Component  -->
+            @await Component.InvokeAsync("Breadcrumb")
+            <!-- RenderBody  -->
+            @RenderBody()
+        </div>
+        <!-- Footer Component  -->
+        @await Component.InvokeAsync("Footer")
+    </div>
+
+    <!-- Script include  -->
+    @await Component.InvokeAsync("Script")
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

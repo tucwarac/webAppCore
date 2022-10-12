@@ -1,0 +1,33 @@
+﻿@using WebAppCore.Models.NevigationMenu
+
+@model NavigationMenuModel
+
+<div class="navbar-custom">
+    <div class="container-fluid">
+        <div id="navigation">
+            <!-- Navigation Menu-->
+            <ul class="navigation-menu">
+                @foreach (var menuLevel1 in Model.MenuGroupModelList)
+                {
+                    <li class="has-submenu">
+                        <a href="#"><i class="@menuLevel1.ClassIcon m-r-5"></i>@menuLevel1.Text</a>
+                        <ul class="submenu">
+                            @if (menuLevel1.MenuModelList != null)
+                            {
+                                @foreach (var menuLevel2 in menuLevel1.MenuModelList)
+                                {
+                                    <li>
+                                        <a href="@Url.Action(menuLevel2.ActionName, menuLevel2.ControllerName, new { Area = menuLevel2.AreaName })">
+                                            @menuLevel2.Text
+                                        </a>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </li>
+                }
+            </ul>
+            <!-- End navigation menu -->
+        </div> <!-- end #navigation -->
+    </div> <!-- end container-fluid -->
+</div> <!-- end navbar-custom -->

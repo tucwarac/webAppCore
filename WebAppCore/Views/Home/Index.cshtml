@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using WebAppCore.Models.BlockModule
+@using WebAppCore.Models.Home
+@model HomeModel
+
+@switch (Model.HomeDynamicModelIdChoosed)
+{
+    case 1:
+        @foreach (var blockModuleRow in ((BlockModuleModel)Model.HomeDynamicModelList[Model.HomeDynamicModelIdChoosed - 1].Model).BlockModuleRowList)
+        {
+            <div class="row">
+
+                @foreach (var blockModuleBox in blockModuleRow.BlockModuleBoxList)
+                {
+                    <div class="@blockModuleRow.ClassGrid">
+                        <div class="card-box">
+                            <h4 class="header-title m-t-0"><i class="@blockModuleBox.ClassIcon m-r-5"></i>@blockModuleBox.Text</h4>
+
+                            <div id="@blockModuleBox.Name" style="height: 100%; @blockModuleBox.StyleMinHeight">
+
+                                <div class="row">
+
+                                    @foreach (var menu in blockModuleBox.MenuModelList)
+                                    {
+                                        <div class="@blockModuleBox.ClassGrid m-t-20">
+                                            <a href="@Url.Action(@menu.ActionName, @menu.ControllerName, new { Area = @menu.AreaName })">
+                                                <button class="@menu.ClassColor waves-effect waves-light m-b-5" style="width:100%; height:100%; min-height:100px; @blockModuleBox.StyleButtonRounded">
+                                                    <i class="@menu.ClassIcon m-r-5"></i>
+                                                    <br />
+                                                    <span>@menu.Text</span>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    }
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- end col -->
+                }
+
+            </div>
+            <!-- end row -->
+        }
+        break;
+
+    case 2:
+        <!-- do nothing because the homeController is coded -->
+        break;
+
+    default:
+        break;
+
+}
+
